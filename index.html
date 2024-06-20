@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+    <title>Jogo Sete e Meio</title>
+    <link rel="icon" href="assets/image_v2.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="left">
+        <div>
+            <img src="./assets/seven-half.png" class="logo_principal">
+        </div>
+        <div class="buttons_left">
+            <button id="btn_play" class="btn_purple" onclick="play()">
+                PLAY
+            </button>
+            <!-- <button id="btn_settings" class="btn_white" onclick="settings()">
+                SETTINGS
+            </button> -->
+            <!-- <button id="btn_score" class="btn_white" onclick="score()">
+                SCORE
+            </button> -->
+
+            <button id="btn_next" class="btn_purple" onclick="next()">
+                NEXT GAME
+            </button>
+        </div>
+
+        <button id="btn_restart" class="btn_red" onclick="restart()">
+            RESTART ALL
+        </button>
+        <p>by Matheus Oliveira</p>
+    </div>
+    <main id="main">
+        <div class="table" id="green_table">
+            <div class="cpu_round" id="cpu_round">
+                <div class="cpu_points">
+                    <h5>CPU</h5>
+                    <h2 id="cpu_points"></h2>
+                </div>
+            </div>
+            <div class="table_outline">
+                <div class="table_container">
+                    <img class="img_fundo" src="assets/seven-half-fundo.png" alt="">
+
+                    <div id="mensagem">
+                        <h4 id="texto_mensagem"></h4>
+                    </div>
+
+                    <div class="cards_cpu" id="cards_cpu">
+                        <!-- <div class="card" id="card_player">
+                            <div class="number" id="valor_card_player">A</div>
+                            <div class="suit" id="naipe_card_player">♦</div> 
+                        </div> -->
+                    </div>
+                    <div class="baralho" id="baralho_mesa">
+                        <div class="card2">
+                            <div>
+                                <img width="30px" src="./assets/image_v.png" class="logo">
+                            </div>
+                        </div>
+                        <div class="card">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed_score" id="fixed_score">
+            <div class="number_score">
+                <h4>YOU</h4>
+                <div class="number">
+                    <h3 id="player_points3"></h3>
+                    <h5>x</h5>
+                    <h3 id="cpu_points3"></h3>
+                </div>
+                <h4>CPU</h4>
+            </div>
+            <div class="text_score">
+                GAME SCORE
+            </div>
+        </div>
+
+        <div class="jogo" id="game_square">
+            <div class="you_round" id="you_round">
+                <div class="you_points">
+                    <h5>YOU</h5>
+                    <h2 id="player_points"></h2>
+                </div>
+            </div>
+            <div class="jogo_conteudo">
+                <div class="cards_player" id="cards_player">
+                    <!-- <div class="card" id="card_player">
+                        <div class="number" id="valor_card_player">A</div>
+                        <div class="suit" id="naipe_card_player">♦</div> 
+                    </div> -->
+                </div>
+                <div class="buttons">
+                    <button id="btn_buy" class="btn_purple" onclick="buy()">
+                        BUY CARD
+                    </button>
+                    <button id="btn_stop" class="btn_red" onclick="stop()">
+                        STOP PLAY
+                    </button>
+                    <div class="score">
+                        <div class="number_score">
+                            <h5>YOU</h5>
+                            <div class="number">
+                                <h4 id="player_points2"></h4>
+                                <h6>x</h6>
+                                <h4 id="cpu_points2"></h4>
+                            </div>
+                            <h5>CPU</h5>
+                        </div>
+                        <div class="text_score">
+                            POINTS
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
